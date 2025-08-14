@@ -1,0 +1,7 @@
+<h1>Mes listes</h1>
+<h2><%= link_to 'Voir tous les films', movies_path, class: 'btn btn-primary' %></h2>
+<h2><%= link_to 'Créer une liste', new_list_path, class: 'btn btn-success' %></h2>
+<% @lists.each do |list| %>
+<%= list.name %>
+<%= link_to 'Voir ma liste', list_path(list), class: 'btn btn-primary' %>
+<% end %>

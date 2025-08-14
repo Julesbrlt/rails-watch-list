@@ -1,0 +1,8 @@
+<%= simple_form_for @list, html: { class: "m-4" } do |f| %>
+  <%= f.input :name,
+    label: "Category",
+    label_html: { class: "form-label fw-semibold" },
+    input_html: { class: "form-control" },
+    wrapper_html: { class: "mb-3" } %>
+  <%= f.button :submit, 'Créer une nouvelle liste', class: 'btn btn-primary mt-3' %>
+<% end %>

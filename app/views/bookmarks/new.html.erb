@@ -1,0 +1,9 @@
+<%= simple_form_for [@movie, @bookmark], html: { class: "mt-4" } do |f| %>
+  <%= f.input :comment,
+    label: "Comment about the movie",
+    label_html: { class: "form-label fw-semibold" },
+    input_html: { class: "form-control" },
+    wrapper_html: { class: "mb-3" } %>
+  <%= f.association :list %>
+  <%= f.button :submit, 'Ajouter à cette liste', class: 'btn btn-primary mt-3' %>
+<% end %>

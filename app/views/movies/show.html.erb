@@ -1,0 +1,11 @@
+<h1>Mon film</h1>
+<%= link_to 'Retour à la liste de films', movies_path, class:'btn btn-primary' %>
+<div class="card m-5 " style="width: 20rem;">
+  <img src='<%= @movie.poster_url %>' class="card-img-top" alt='<%= @movie.title %>'>
+  <div class="card-body">
+    <h5 class="card-title"><%= @movie.title %></h5>
+    <p class="card-text"><%= @movie.overview %></p>
+    <p class="card-text">Note : <%= @movie.rating %></p>
+    <%= link_to 'Ajouter à une liste', new_movie_bookmark_path(@movie), class:'btn btn-primary' %>
+  </div>
+</div>
